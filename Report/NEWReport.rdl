@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1120174000">
+          <DataField>ReportForNavId_1120174000</DataField>
+        </Field>
+        <Field Name="CompName">
+          <DataField>CompName</DataField>
+        </Field>
+        <Field Name="Staff">
+          <DataField>Staff</DataField>
+        </Field>
+        <Field Name="RcptNo">
+          <DataField>RcptNo</DataField>
+        </Field>
+        <Field Name="OrderDt">
+          <DataField>OrderDt</DataField>
+        </Field>
+        <Field Name="Ordertime">
+          <DataField>Ordertime</DataField>
+        </Field>
+        <Field Name="netAmt">
+          <DataField>netAmt</DataField>
+        </Field>
+        <Field Name="netAmtFormat">
+          <DataField>netAmtFormat</DataField>
+        </Field>
+        <Field Name="GrossAmt">
+          <DataField>GrossAmt</DataField>
+        </Field>
+        <Field Name="GrossAmtFormat">
+          <DataField>GrossAmtFormat</DataField>
+        </Field>
+        <Field Name="LineDisc">
+          <DataField>LineDisc</DataField>
+        </Field>
+        <Field Name="LineDiscFormat">
+          <DataField>LineDiscFormat</DataField>
+        </Field>
+        <Field Name="TotDisc">
+          <DataField>TotDisc</DataField>
+        </Field>
+        <Field Name="TotDiscFormat">
+          <DataField>TotDiscFormat</DataField>
+        </Field>
+        <Field Name="GSTAmt">
+          <DataField>GSTAmt</DataField>
+        </Field>
+        <Field Name="GSTAmtFormat">
+          <DataField>GSTAmtFormat</DataField>
+        </Field>
+        <Field Name="DeliveryDate">
+          <DataField>DeliveryDate</DataField>
+        </Field>
+        <Field Name="DeliveryType">
+          <DataField>DeliveryType</DataField>
+        </Field>
+        <Field Name="DeliveryTime">
+          <DataField>DeliveryTime</DataField>
+        </Field>
+        <Field Name="Instr">
+          <DataField>Instr</DataField>
+        </Field>
+        <Field Name="Filters">
+          <DataField>Filters</DataField>
+        </Field>
+        <Field Name="ItemNo">
+          <DataField>ItemNo</DataField>
+        </Field>
+        <Field Name="StoreNo">
+          <DataField>StoreNo</DataField>
+        </Field>
+        <Field Name="SName">
+          <DataField>SName</DataField>
+        </Field>
+        <Field Name="Desc">
+          <DataField>Desc</DataField>
+        </Field>
+        <Field Name="Price">
+          <DataField>Price</DataField>
+        </Field>
+        <Field Name="PriceFormat">
+          <DataField>PriceFormat</DataField>
+        </Field>
+        <Field Name="Qty">
+          <DataField>Qty</DataField>
+        </Field>
+        <Field Name="QtyFormat">
+          <DataField>QtyFormat</DataField>
+        </Field>
+        <Field Name="Amt">
+          <DataField>Amt</DataField>
+        </Field>
+        <Field Name="AmtFormat">
+          <DataField>AmtFormat</DataField>
+        </Field>
+        <Field Name="EntryStatus">
+          <DataField>EntryStatus</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>
